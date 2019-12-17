@@ -1,0 +1,52 @@
+﻿<Window x:Class="H04_Verwarming.Wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:H04_Verwarming.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <ListBox x:Name="lstSimulaties" HorizontalAlignment="Left" Height="100" Margin="10,42,0,0" VerticalAlignment="Top" Width="100" SelectionChanged="lstSimulaties_SelectionChanged"/>
+        <Label Content="Simulaties" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="btnSimulatieToevoegen" Content="+" HorizontalAlignment="Left" Margin="90,14,0,0" VerticalAlignment="Top" Width="20" Click="btnSimulatieToevoegen_Click"/>
+        <ListBox x:Name="lstToestellen" HorizontalAlignment="Left" Height="98" Margin="133,44,0,0" VerticalAlignment="Top" Width="186" SelectionChanged="lstToestellen_SelectionChanged"/>
+        <Label Content="Toestellen" HorizontalAlignment="Left" Margin="133,11,0,0" VerticalAlignment="Top" Width="100"/>
+        <Grid x:Name="grdAlgemeen" Margin="343,81,237,0" Background="#FFF9E6D6" Height="153" VerticalAlignment="Top">
+            <Label Content="Naam" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66"/>
+            <TextBox x:Name="txtNaam" HorizontalAlignment="Left" Height="23" Margin="80,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Prijs" HorizontalAlignment="Left" Margin="0,29,0,0" VerticalAlignment="Top" Width="66"/>
+            <TextBox x:Name="txtPrijs" HorizontalAlignment="Left" Height="23" Margin="80,32,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Opbrengst" HorizontalAlignment="Left" Margin="0,57,0,0" VerticalAlignment="Top" Width="66"/>
+            <TextBox x:Name="txtOpbrengst" HorizontalAlignment="Left" Height="23" Margin="80,60,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Levensduur" HorizontalAlignment="Left" Margin="0,85,0,0" VerticalAlignment="Top" Width="75"/>
+            <Label Content="Rendement" HorizontalAlignment="Left" Margin="0,111,0,0" VerticalAlignment="Top" Width="75"/>
+            <Label x:Name="lblRendement" Content="0" HorizontalAlignment="Left" Margin="80,111,0,0" VerticalAlignment="Top" Width="120"/>
+            <ComboBox x:Name="cmbLevensduur" HorizontalAlignment="Left" Margin="80,89,0,0" VerticalAlignment="Top" Width="118"/>
+
+        </Grid>
+        <Grid x:Name="grdElektrisch" Margin="347,250,237,0" Height="117" VerticalAlignment="Top">
+            <Label Content="Verbruik" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66"/>
+            <TextBox x:Name="txtVerbruik" HorizontalAlignment="Left" Height="23" Margin="80,4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" />
+            <Label Content="Type" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Margin="0,41,0,0"/>
+            <ListBox x:Name="lstType" HorizontalAlignment="Left" Height="56" Margin="80,41,0,0" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Grid x:Name="grdHaard" Margin="565,250,10,52">
+            <Label Content="Afgesloten" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75"/>
+            <Label Content="Brandstof" HorizontalAlignment="Left" VerticalAlignment="Top" Width="66" Margin="0,41,0,0"/>
+            <ListBox x:Name="lstBrandstof" HorizontalAlignment="Left" Height="56" Margin="80,41,0,0" VerticalAlignment="Top" Width="120"/>
+            <CheckBox x:Name="chkAfgesloten" Content="" HorizontalAlignment="Left" Margin="80,6,0,0" VerticalAlignment="Top" Width="94"/>
+
+        </Grid>
+
+        <Button x:Name="btnVoegHaardToe" Content="Haard" HorizontalAlignment="Left" Margin="427,44,0,0" VerticalAlignment="Top" Width="75" Click="btnVoegHaardToe_Click"/>
+        <Button x:Name="btnVoegElektrischToe" Content="Elektrisch" HorizontalAlignment="Left" Margin="347,44,0,0" VerticalAlignment="Top" Width="75" Click="btnVoegElektrischToe_Click"/>
+        <Label Content="Voeg toe" HorizontalAlignment="Left" Margin="347,8,0,0" VerticalAlignment="Top" Width="141"/>
+        <Button x:Name="btnOpslaan" Content="Opslaan" HorizontalAlignment="Left" Margin="347,372,0,0" VerticalAlignment="Top" Width="75" Click="btnOpslaan_Click"/>
+        <TextBlock x:Name="tbkFeedback" HorizontalAlignment="Left" Margin="12,290,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="102" Width="307" Background="#FFCAF5EF" Padding="5" Foreground="White"/>
+        <Button x:Name="btnVerwijderToestel" Content="Verwijder" HorizontalAlignment="Left" Margin="427,372,0,0" VerticalAlignment="Top" Width="75" Click="btnVerwijderToestel_Click"/>
+        <TextBlock x:Name="tbkStatistieken" HorizontalAlignment="Left" Margin="12,158,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="102" Width="307" Background="#FFF3F5CA" Padding="5" Foreground="#FF061CF9"/>
+
+
+    </Grid>
+</Window>
